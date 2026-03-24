@@ -1,0 +1,76 @@
+
+/* KONTAINER ZA PERSPEKTIVU */
+.crawl-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+/* FADE U MRK */
+.crawl-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  /*background: linear-gradient(to top, #1e1e1e 20%, transparent);*/
+  pointer-events: none;
+}
+
+/* TEKST KOJI SE POMERA */
+.crawl-text {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  transform-origin: bottom center;
+  animation: crawl 50s linear forwards;
+}
+
+@keyframes crawl {
+  0% {
+    transform: rotateX(20deg) translateZ(0) translateY(100%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(25deg) translateZ(-1000px) translateY(-600%) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* FADE U MRK + PERSPEKTIVA ZA MOBILNE */
+@media (max-width: 768px) {
+  .crawl-container {
+    height: 100vh;
+    perspective: 600px; 
+  }
+  .crawl-text {
+    animation: crawl-mobile 80s linear forwards;
+  }
+
+  @keyframes crawl-mobile {
+    0% {
+      transform: rotateX(20deg) translateZ(0) translateY(100%) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: rotateX(25deg) translateZ(-800px) translateY(-600%) scale(0.2);
+      opacity: 0;
+    }
+  }
+}
+
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 1s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

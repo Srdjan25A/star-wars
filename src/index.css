@@ -1,0 +1,43 @@
+@import "tailwindcss";
+.font-starjedi {
+  font-family: 'StarJedi', sans-serif;
+}
+body {
+  font-family: 'StarJedi', sans-serif;
+  background-image: url('assets/background-image2.jpg');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+}
+html, body{
+  min-height: 100vh; 
+}
+.spinner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: relative;
+}
+.spinner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow:
+    0 -24px 0 4px #FFD500,
+    17px -17px 0 4px #FFD500,
+    24px 0 0 4px #FFD500,
+    17px 17px 0 4px #FFD500,
+    0 24px 0 4px #FFD500,
+    -17px 17px 0 4px #FFD500,
+    -24px 0 0 4px #FFD500,
+    -17px -17px 0 4px #FFD500;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
