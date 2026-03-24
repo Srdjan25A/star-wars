@@ -72,7 +72,7 @@ function TableComponents({setVisible}){
                             <TableContainer component={Paper} className="custom-scroll" sx={{backgroundColor: '#1e1e1e', borderRadius: '12px'}} style={{ color: 'gray', maxHeight: 400, overflowY: 'auto'}}>
                                 <Table sx={{
                                      '& .MuiTableCell-root': {
-                                        fontFamily: 'StarJedi, sans-serif',
+                                        fontFamily: 'StarJedi',
                                         color: '#fff',
                                         borderColor: '#333',
                                         },

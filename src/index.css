@@ -1,9 +1,9 @@
 @import "tailwindcss";
 .font-starjedi {
-  font-family: 'StarJedi', sans-serif;
+  font-family: 'StarJedi';
 }
 body {
-  font-family: 'StarJedi', sans-serif;
+  font-family: 'StarJedi';
   background-image: url('assets/background-image2.jpg');
   background-size: cover;      
   background-position: center; 
